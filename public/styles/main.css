@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    background-color: rgba(0, 0, 0, 0.723);
+    color: limegreen;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    text-align: center;
+}
+
+.random-post-button{
+    width: 100px;
+    height: 50px;
+}
+
+.navbar{
+    background-color: rgb(178, 92, 0);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+}
+
+.search-bar{
+    input{width: 500px;
+    height: 30px;}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; 
+}
+.anime-buttons{
+    display: flex;
+    justify-content: space-around;
+    input{padding: 5px;}
+    input:hover{
+        cursor: pointer;
+        background-color: aliceblue;
+    }
+}
+footer{
+    background-color: rgb(178, 92, 0);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+li{
+    list-style: none;
+}
+.column{     
+    img{height: 200px;
+    width: 200px;}
+}
+.anime-list{ 
+    a{text-decoration: none;
+    color: lime;}
+    display: grid;
+    grid-gap: 20px 20px;
+    grid-template-columns: repeat(4,200px);    
+    justify-content: center;
+}
+.anime-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-gap: 20px; /* Adjust the gap between grid items */
+}
+
+footer{
+    text-align: center;
+}

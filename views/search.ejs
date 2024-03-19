@@ -1,0 +1,25 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container">
+    <h2>Search Results for: "<%= query %>"</h2>
+    <div class="anime-list">
+        <% if (locals.data && locals.data.length > 0) { %>
+            <div class="grid-container">
+                <% data.forEach(anime => { %>
+                    <div class="grid-item">
+                        <a href="<%= anime.url %>">
+                            <div class="anime-item">
+                                <img src="<%= anime.images.jpg.image_url %>" alt="Anime Image">
+                                <p><%= anime.title %></p>
+                            </div>
+                        </a>
+                    </div>
+                <% }); %>
+            </div>
+        <% } else { %>
+            <p>No anime found for "<%= data %>"</p>
+        <% } %>
+    </div>
+</div>
+
+<%- include("partials/footer.ejs") %>
