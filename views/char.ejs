@@ -1,0 +1,16 @@
+<%- include("partials/header.ejs") %>
+
+    <div class="container">
+        <div class="anime-info-list">
+            <h1>Title:<%= char.title %></h1>
+            <div class="image-details-container">
+                <div class="image-container">
+            <a href="<%= char.url %>"><img src="<%= char.images.jpg.image_url %>"></a>
+            </div>
+            <ul>
+                <li>Name:<%= char.name %></li>
+        <h4>About:<%= char.about %></h4>
+        </div>
+     </div>
+    </div>
+<%- include("partials/footer.ejs") %>

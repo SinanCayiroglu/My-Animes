@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs") %>
+
+    <div class="container">
+        <div class="anime-info-list">
+            <h1>Title:<%= anime.title %></h1>
+            <div class="image-details-container">
+                <div class="image-container">
+            <a href="<%= anime.url %>"><img src="<%= anime.images.jpg.image_url %>"></a>
+            </div>
+            <ul>
+                <li>Type:<%= anime.type %></li>
+                <li>Episodes:<%= anime.episodes %></li>
+                <li>Status:<%= anime.status %></li>
+                <li>Aired:<%= anime.aired.from.string %></li>
+                <li>Episode duration:<%= anime.duration %></li>
+                <li>Score:<%= anime.score %></li>
+                <li>Rank:<%= anime.rank %></li>
+                <li>Popularity:<%= anime.popularity %></li></ul>
+        <h4>Synopsis:<%= anime.synopsis %></h4>
+        </div>
+     </div>
+    </div>
+<%- include("partials/footer.ejs") %>

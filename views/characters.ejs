@@ -1,0 +1,20 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container">
+    
+    <div class="column">
+        <h2>Animes By favorite</h2>
+
+        <div class="anime-list">
+            
+            <% if (locals.characters && locals.characters.length > 0) { %>
+
+                    <% characters.forEach(character => { %>
+                        <a class="anime-card" href="/char/<%= character.mal_id %>">
+                        <img src="<%= character.images.jpg.image_url %>" alt="Anime Image">
+                        <p><%= character.name %></p>
+                    </a>
+                        <% }); %>
+                
+            <% } %>
+<%- include("partials/footer.ejs") %>

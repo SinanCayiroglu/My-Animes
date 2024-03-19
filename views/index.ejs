@@ -6,12 +6,11 @@
         <h2>Animes By favorite</h2>
 
         <div class="anime-list">
-
+            
             <% if (locals.data && locals.data.length > 0) { %>
 
                     <% data.forEach(anime => { %>
-
-                        <a href="<%= anime.url %>">
+                        <a class="anime-card" href="/anime/<%= anime.mal_id %>">
                         <img src="<%= anime.images.jpg.image_url %>" alt="Anime Image">
                         <p><%= anime.title %></p>
                         <p><%= anime.name %></p>
@@ -31,7 +30,7 @@
             <% } %>
         </div>
     </div>
-
+    
 </div>
 
 <%- include("partials/footer.ejs") %>

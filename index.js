@@ -24,24 +24,17 @@ app.get("/popularity", async (req, res) => {
   res.render("index.ejs", { data: result });
 });
 
-app.get("/characters",async(req,res)=>{
-  const response = await axios.get("https://api.jikan.moe/v4/top/characters")
-  const result = response.data.data
-  res.render("index.ejs",{data:result})
-})
+app.get("/characters", async (req, res) => {
+  const response = await axios.get("https://api.jikan.moe/v4/top/characters");
+  const result = response.data.data;
+  res.render("characters.ejs", { characters: result });
+});
 
 app.get("/random", async (req, res) => {
-  try {
-    const response = await axios.get("https://api.jikan.moe/v4/random/anime");
-    const result = response.data.data;
-    console.log(result);
-    res.render("random.ejs", { randomdata: result });
-  } catch (error) {
-    console.error("Failed to make request:", error.message);
-    res.render("random.ejs", {
-      error: error.message,
-    });
-  }
+  const response = await axios.get("https://api.jikan.moe/v4/random/anime");
+  const result = response.data.data;
+  console.log(result);
+  res.render("random.ejs", { randomdata: result });
 });
 
 app.get("/search", async (req, res) => {
@@ -58,6 +51,19 @@ app.get("/search", async (req, res) => {
     res.render("index.ejs", { query: query });
   }
 });
+
+app.get("/anime/:id",async(req,res)=>{
+  const id = req.params.id
+  const response = await axios.get("https://api.jikan.moe/v4/anime/"+id)
+  const result = response.data.data
+  res.render("anime.ejs",{anime:result,id:id})
+})
+app.get("/char/:id",async(req,res)=>{
+  const id = req.params.id
+  const response = await axios.get("https://api.jikan.moe/v4/characters/"+id)
+  const result = response.data.data
+  res.render("char.ejs",{char:result,id:id})
+})
 
 app.listen(port, () => {
   console.log("Server is running on port" + port);

@@ -12,6 +12,7 @@ body{
 
 .container{
     text-align: center;
+    justify-content: center;
 }
 
 .random-post-button{
@@ -65,14 +66,32 @@ li{
 .anime-list{ 
     a{text-decoration: none;
     color: lime;}
-    display: grid;
-    grid-gap: 20px 20px;
-    grid-template-columns: repeat(4,200px);    
+    display: flex;
+    flex-direction: row;  
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
 }
 .anime-text{
     display: flex;
     flex-direction: column;
+}
+
+.anime-card:hover {
+    background-color: var(--third-bg-color);
+    color: var(--third-color);
+    transform: scale(1.25) rotate3d(1, 2, 3, -5deg);
+    box-shadow: 1px 1px 20px 10px var(--main-bg-color);
+    transition: transform 0.5s
+}
+.image-details-container {
+    display: flex;
+}
+
+.image-container {
+    flex: 0 0 auto; /* Don't grow or shrink, initial width */
+    margin-right: 20px; /* Add some space between image and details */
+    margin-left: 50px;
 }
 
 .grid-container {

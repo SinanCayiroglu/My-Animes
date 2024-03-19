@@ -3,9 +3,12 @@
     <div class="container">
         <div class="anime-info-list">
             <h1>Title:<%= randomdata.title %></h1>
+            <div class="image-details-container">
+                <div class="image-container">
             <a href="<%= randomdata.url %>"><img src="<%= randomdata.images.jpg.image_url %>"></a>
+            </div>
             <ul>
-                <li><%= randomdata.type %></li>
+                <li>Type:<%= randomdata.type %></li>
                 <li>Episodes:<%= randomdata.episodes %></li>
                 <li>Status:<%= randomdata.status %></li>
                 <li>Aired:<%= randomdata.aired.from.string %></li>
@@ -15,6 +18,6 @@
                 <li>Popularity:<%= randomdata.popularity %></li></ul>
         <h4>Synopsis:<%= randomdata.synopsis %></h4>
         </div>
-     
+     </div>
     </div>
 <%- include("partials/footer.ejs") %>
