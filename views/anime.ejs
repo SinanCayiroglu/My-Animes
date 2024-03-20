@@ -16,7 +16,9 @@
                 <li>Score:<%= anime.score %></li>
                 <li>Rank:<%= anime.rank %></li>
                 <li>Popularity:<%= anime.popularity %></li></ul>
-        <h4>Synopsis:<%= anime.synopsis %></h4>
+        <p>Synopsis:<%= anime.synopsis %></p>
+        <p class="anime-trailer">Trailer: <iframe src="<%= anime.trailer.embed_url %>" frameborder="0"></iframe></p>
+
         </div>
      </div>
     </div>
