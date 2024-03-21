@@ -1,24 +1,35 @@
 <%- include("partials/header.ejs") %>
 
-    <div class="container">
-        <div class="anime-info-list">
-            <h1>Title:<%= randomdata.title %></h1>
-            <div class="image-details-container">
-                <div class="image-container">
-            <a href="<%= randomdata.url %>"><img src="<%= randomdata.images.jpg.image_url %>"></a>
-            </div>
-            <ul>
-                <li>Type:<%= randomdata.type %></li>
-                <li>Episodes:<%= randomdata.episodes %></li>
-                <li>Status:<%= randomdata.status %></li>
-                <li>Aired:<%= randomdata.aired.string %></li>
-                <li>Episode duration:<%= randomdata.duration %></li>
-                <li>Score:<%= randomdata.score %></li>
-                <li>Rank:<%= randomdata.rank %></li>
-                <li>Popularity:<%= randomdata.popularity %></li></ul>
-                <p>Trailer:<%= randomdata.trailer.youtube_id %></p>
+<div class="container">
+  <div class="details">
+    <div class="title"> <h1>Title:<%= randomdata.title %></h1>
         <p>Synopsis:<%= randomdata.synopsis %></p>
-        </div>
-     </div>
+</div>
+   
+
+    <div class="detail">
+
+      <div class="image">
+        <a href="/anime/<%= randomdata.mal_id %>"
+          ><img src="<%= randomdata.images.jpg.image_url %>"
+        /></a>
+      </div>
+      <div class="anime-details">
+       
+          <p>Type:<%= randomdata.type %></p>
+          <p>Episodes:<%= randomdata.episodes %></p>
+          <p>Status:<%= randomdata.status %></p>
+          <p>Aired:<%= randomdata.aired.string %></p>
+          <p>Episode duration:<%= randomdata.duration %></p>
+          <p>Score:<%= randomdata.score %></p>
+          <p>Rank:<%= randomdata.rank %></p>
+          <p>Popularity:<%= randomdata.popularity %></p>
+        
+      </div>
     </div>
+    <h3>Trailer:</h3>
+   </div><div class="trailer">
+    <iframe src="<%= randomdata.trailer.embed_url %>" frameborder="0"></iframe>
+  </div>
+</div>
 <%- include("partials/footer.ejs") %>

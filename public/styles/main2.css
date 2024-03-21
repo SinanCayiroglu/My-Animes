@@ -1,0 +1,280 @@
+  /* Reset default margin and padding */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #3333339d;
+    color: aliceblue;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .container {
+
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .details {
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    margin-bottom: 20px;
+  }
+  
+  .title h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .title p {
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  .detail {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image {
+    margin-right: 20px;
+  }
+  
+  .image img {
+    max-width: 200px;
+    height: auto;
+  }
+  .anime-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  h3{
+    margin-top: 2rem;
+  }
+  .anime-details p {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+
+  .trailer iframe {
+    width: 50%;
+    height: 300px;
+  }
+  
+  .characters {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .character {
+    margin-right: 20px;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .character a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .character img {
+    max-width: 100px;
+    height: auto;
+  }
+  
+  .character p {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  
+
+
+  
+
+  .navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .search-bar {
+    flex: 1;
+  }
+  
+  .search-bar-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .search-bar-form input[type="search"] {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .anime-buttons {
+    display: flex;
+  }
+  
+  .anime-buttons form {
+    margin-right: 10px;
+  }
+  
+  .anime-buttons input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .anime-buttons input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 600px) {
+    .navbar-content {
+      flex-direction: column;
+    }
+  
+    .search-bar {
+      margin-bottom: 10px;
+    }
+  
+    .anime-buttons {
+      flex-direction: column;
+    }
+  
+    .anime-buttons form {
+      margin-right: 0;
+      margin-bottom: 5px;
+    }
+  }
+  
+.column {
+    margin-bottom: 20px;
+  }
+  
+  .column h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .anime-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .anime-card {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 350;
+  }
+  
+  .anime-card img {
+    width: 100%;
+    max-width: 250px;
+    height: 300px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .anime-card p {
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+  }
+  
+  /* Footer styles (assuming it's included in "partials/footer.ejs") */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+
+  }
+  .character:hover{
+    transform: scale(1.25) rotate3d(1, 2, 3, -5deg);
+    transition: transform 0.5s;
+
+}
+.anime-card:hover {
+    background-color: var(--third-bg-color);
+    color: var(--third-color);
+    transform: scale(1.25) rotate3d(1, 2, 3, -5deg);
+    box-shadow: 1px 1px 20px 10px var(--main-bg-color);
+    transition: transform 0.5s;
+  }
+  .anime-list {
+    a {
+      text-decoration: none;
+      color: lime;
+    }
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  .anime-info-list {
+    margin-bottom: 20px;
+  }
+  
+  .anime-info-list h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .image-details-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .image-container {
+    margin-right: 20px;
+  }
+  
+  .image-container img {
+    max-width: 300px;
+    height: auto;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+  }
+  
+  p {
+    margin-bottom: 10px;
+  }
+  

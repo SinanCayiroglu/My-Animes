@@ -55,9 +55,13 @@ app.get("/search", async (req, res) => {
 app.get("/anime/:id",async(req,res)=>{
   const id = req.params.id
   const response = await axios.get("https://api.jikan.moe/v4/anime/"+id)
+  const response2 = await axios.get("https://api.jikan.moe/v4/anime/"+id+"/characters");
   const result = response.data.data
-  res.render("anime.ejs",{anime:result,id:id})
+  const result2 = response2.data.data
+  res.render("anime.ejs",{anime:result,character:result2,id:id})
 })
+
+
 app.get("/char/:id",async(req,res)=>{
   const id = req.params.id
   const response = await axios.get("https://api.jikan.moe/v4/characters/"+id)
